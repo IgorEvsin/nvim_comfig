@@ -107,8 +107,10 @@ set splitright			"Vertical splits go to the right
 set mouse=a			"Full-featured mouse
 set mousehide			"Hide system cursor after a while
 set encoding=utf-8		"Editor's encoding is UTF-8 (not file's)
-"Map Cyrillic keyboard layout back to Latin so mappings work in either layout
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+""Map Cyrillic keyboard layout back to Latin so mappings work in either layout.
+"Letters + symbols that exist in Russian layout (langmap is single-pass; symbols
+"that don't exist in Russian, e.g. $, still require switching layout).
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz,жЖ;;:,юЮ;.>,хХ;[{,ъЪ;]},.;/,ёЁ;`~
 set autoindent			"Repeat indent if fyletype has none
 set expandtab			"Tabs are spaces now
 set shiftwidth=4		"Visible width of a tab
