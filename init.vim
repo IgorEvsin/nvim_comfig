@@ -16,7 +16,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'stevearc/oil.nvim'
     Plug 'SirZenith/oil-vcs-status'
-    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'catgoose/nvim-colorizer.lua'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app && npx --yes yarn install' }
     Plug 'neovim/nvim-lspconfig'
