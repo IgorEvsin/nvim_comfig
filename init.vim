@@ -108,7 +108,7 @@ set mouse=a			"Full-featured mouse
 set mousehide			"Hide system cursor after a while
 set encoding=utf-8		"Editor's encoding is UTF-8 (not file's)
 "Map Cyrillic keyboard layout back to Latin so mappings work in either layout
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set autoindent			"Repeat indent if fyletype has none
 set expandtab			"Tabs are spaces now
 set shiftwidth=4		"Visible width of a tab
@@ -125,6 +125,7 @@ set inccommand=nosplit		"Live preview of :s/// substitute
 set foldmethod=indent		"Indent folding (much cheaper than syntax)
 set foldlevelstart=99		"Open file unfolded (fold manually with zM/zR)
 set visualbell			"Disable annoying beeping
+set clipboard=unnamedplus	"Sync Default Yank/Paste
 let mapleader="-"		"Prefix for mappings
 let maplocalleader="\\"		"Scond prefix for mappings
 
@@ -280,14 +281,14 @@ function _G.LazyLSP()
   })
 
   -- Pass nvim-cmp capabilities to servers before they're auto-enabled
-  for _, server in ipairs({ "clangd", "ty", "lua_ls", "taplo", "jsonls", "ruff" }) do
+  for _, server in ipairs({ "clangd", "ty", "lua_ls", "taplo", "ruff" }) do
     vim.lsp.config(server, { capabilities = capabilities })
   end
 
   require("mason-lspconfig").setup({
     ensure_installed = {
       "clangd", "ty", "lua_ls",
-      "taplo", "jsonls", "ruff",
+      "taplo", "ruff",
     },
   })
 
