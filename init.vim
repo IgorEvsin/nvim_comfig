@@ -5,7 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-repeat'
-    Plug 'navarasu/onedark.nvim'
+    Plug 'D0nw0r/dark2026.nvim'
     Plug 'mileszs/ack.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -87,8 +87,7 @@ end
 EOF
 
 "Color scheme
-let g:onedark_config = {'style': 'warmer'}
-colorscheme onedark
+colorscheme dark2026 
 
 "Font (only applies to GUI nvim: nvim-qt, neovide, etc.)
 set guifont=Droid\ Sans\ Mono:h12
