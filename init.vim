@@ -93,7 +93,7 @@ filetype plugin indent on	"Language detection
 syntax enable			"Syntax highlighting
 set termguicolors		"Full color mode
 "Color scheme
-colorscheme molokai             "Molokai color scheme 
+colorscheme dark2026            "Molokai color scheme 
 set hidden			"Do not close unsaved files
 set clipboard=unnamedplus	"System clipboard for y/p
 set autoread			"Auto-reload file when changed externally

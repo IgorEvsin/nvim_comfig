@@ -26,7 +26,10 @@ else
     let s:molokai_original = 0
 endif
 
+hi link @attribute.python Define
+hi link @attribute Define
 
+hi Include         guifg=#F8F8F2 ctermfg=255 gui=none cterm=none
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74
 hi Number          guifg=#AE81FF
@@ -36,7 +39,7 @@ hi Constant        guifg=#AE81FF               gui=bold
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi iCursor         guifg=#000000 guibg=#F8F8F0
 hi Debug           guifg=#BCA3A3               gui=bold
-hi Define          guifg=#66D9EF
+hi Define          guifg=#E6DB74 ctermfg=222 gui=none cterm=none
 hi Delimiter       guifg=#8F8F8F
 hi DiffAdd                       guibg=#13354A
 hi DiffChange      guifg=#89807D guibg=#4C4745
@@ -46,11 +49,11 @@ hi DiffText                      guibg=#4C4745 gui=italic,bold
 hi Directory       guifg=#66D9EF gui=bold
 hi Error           guifg=#E6DB74 guibg=#1E0010
 hi ErrorMsg        guifg=#F92626 guibg=#232526 gui=bold
-hi Exception       guifg=#A6E22E               gui=bold
+hi Exception       guifg=#F8F8F2               gui=bold
 hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
-hi Function        guifg=#A6E22E
+hi Function        guifg=#F8F8F2
 hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
@@ -71,13 +74,13 @@ hi PmenuSel                      guibg=#808080
 hi PmenuSbar                     guibg=#080808
 hi PmenuThumb      guifg=#66D9EF
 
-hi PreCondit       guifg=#A6E22E               gui=bold
-hi PreProc         guifg=#A6E22E
+hi PreCondit       guifg=#F8F8F2               gui=bold
+hi PreProc         guifg=#F8F8F2
 hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92626               gui=bold
 hi Search          guifg=#000000 guibg=#FFE792
 " marks
-hi SignColumn      guifg=#A6E22E guibg=#232526
+hi SignColumn      guifg=#F8F8F2 guibg=#232526
 hi SpecialChar     guifg=#F92626               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
